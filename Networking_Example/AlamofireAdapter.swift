@@ -31,6 +31,12 @@ public class AlamofireAdapter : RestClientProtocol {
         }
     }
     
+    public func requestAsync(methodType: Method, url: String, parameters: [String : AnyObject]?, parameterEncoding: ParameterEncoding, headers: [String : String]?) -> BFTask {
+        
+        return BFTask()
+        
+    }
+    
 //    public func request (methodType: Method, url: String, headers: [String: String]?) {
 //        request(methodType, url: url, parameters: nil, parameterEncoding: ParameterEncoding.JSON, headers: headers)
 //    }

@@ -19,6 +19,7 @@
 		23EE439B1A6E98960091F521 /* MDBRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE439A1A6E98960091F521 /* MDBRestClient.swift */; };
 		23EE439D1A6E9AE40091F521 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE439C1A6E9AE40091F521 /* AlamofireAdapter.swift */; };
 		23EE439F1A6EAC100091F521 /* MDBServiceCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE439E1A6EAC100091F521 /* MDBServiceCommunicator.swift */; };
+		23EE43B51A72963A0091F521 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE43B41A72963A0091F521 /* NextViewController.swift */; };
 		BE496ABD6D122832872D7527 /* libPods-Networking_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA465977FB1FCA947B68F68 /* libPods-Networking_Example.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		23EE439C1A6E9AE40091F521 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		23EE439E1A6EAC100091F521 /* MDBServiceCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDBServiceCommunicator.swift; sourceTree = "<group>"; };
 		23EE43A01A7258370091F521 /* Networking_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Networking_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		23EE43B41A72963A0091F521 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		7EA465977FB1FCA947B68F68 /* libPods-Networking_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Networking_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDBFC123F7227B0D826F20F /* Pods-Networking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking_Example/Pods-Networking_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			children = (
 				23EE43741A6E93250091F521 /* AppDelegate.swift */,
 				23EE43761A6E93250091F521 /* ViewController.swift */,
+				23EE43B41A72963A0091F521 /* NextViewController.swift */,
 				23EE43781A6E93250091F521 /* Main.storyboard */,
 				23EE437B1A6E93250091F521 /* Images.xcassets */,
 				23EE437D1A6E93250091F521 /* LaunchScreen.xib */,
@@ -298,6 +301,7 @@
 				23EE439F1A6EAC100091F521 /* MDBServiceCommunicator.swift in Sources */,
 				23EE439B1A6E98960091F521 /* MDBRestClient.swift in Sources */,
 				23EE439D1A6E9AE40091F521 /* AlamofireAdapter.swift in Sources */,
+				23EE43B51A72963A0091F521 /* NextViewController.swift in Sources */,
 				23EE43991A6E981A0091F521 /* RestClientProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

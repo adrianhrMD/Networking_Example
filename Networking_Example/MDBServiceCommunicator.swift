@@ -12,7 +12,7 @@ public class MDBServiceCommunicator {
     private var restClient: RestClientProtocol
     
     init () {
-        self.restClient = AlamofireAdapter()
+        self.restClient = MDBRestClient()
     }
     
     public func simpleDummyGet() {
@@ -35,5 +35,26 @@ public class MDBServiceCommunicator {
             parameterEncoding: ParameterEncoding.JSON,
             headers: ["authenticationToken": "Test"],
             completionHandler)
+    }
+    
+    public func loginAsync(username: String, password: String, attempts: Int, browserDetails: String) -> BFTask {
+        var requestParams: [String: AnyObject] = ["username": username, "password": password, "attempts": attempts, "browserDetails": browserDetails]
+        
+        return restClient.requestAsync(
+            Method.POST,
+            url: "http://10.10.10.120:55995/api/authentication/login",
+            parameters: requestParams,
+            parameterEncoding: ParameterEncoding.JSON,
+            headers: ["authenticationToken": "Test"])
+        .continueWithBlock { (requestTask) -> AnyObject! in
+            
+            var data = requestTask.result as NSData
+            var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil)
+            var json = JSON(jsonData!)
+            var authToken = json["AuthToken"]
+            
+            println(authToken.stringValue)
+            return authToken.stringValue
+        }
     }
 }

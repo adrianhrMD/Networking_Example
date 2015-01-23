@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MDBRestClient : RestClientProtocol {
+public class MDBRestClient : RestClientProtocol {
     
     typealias CompletionCallback = (JSON) -> Void
     
@@ -32,7 +32,7 @@ class MDBRestClient : RestClientProtocol {
 //        dataTask.resume()
 //    }
     
-    func request (methodType: Method, url: String, parameters: [String: AnyObject]?, parameterEncoding: ParameterEncoding, headers: [String: String]?, completionHandler: ((JSON) -> Void)) {
+    public func request (methodType: Method, url: String, parameters: [String: AnyObject]?, parameterEncoding: ParameterEncoding, headers: [String: String]?, completionHandler: ((JSON) -> Void)) {
         
         var session = NSURLSession.sharedSession()
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
@@ -59,6 +59,38 @@ class MDBRestClient : RestClientProtocol {
         })
         
         dataTask.resume()
+    }
+    
+    public func requestAsync(methodType: Method, url: String, parameters: [String : AnyObject]?, parameterEncoding: ParameterEncoding, headers: [String : String]?) -> BFTask {
+        var requestTaskSource = BFTaskCompletionSource()
+        
+        var session = NSURLSession.sharedSession()
+        var request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        
+        request.HTTPMethod = methodType.rawValue
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(parameters!, options: NSJSONWritingOptions.allZeros, error: nil)
+        
+        var dataTask = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            if let responseError = error {
+                // ERROR
+                println("error")
+                requestTaskSource.setError(responseError)
+            }
+            
+            if let httpResponse = response as? NSHTTPURLResponse {
+                
+                println("success")
+                requestTaskSource.setResult(data)
+            }
+            
+        })
+        
+        // Start the request
+        dataTask.resume()
+        
+        return requestTaskSource.task
     }
     
 }

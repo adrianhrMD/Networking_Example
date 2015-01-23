@@ -12,7 +12,9 @@ public protocol RestClientProtocol {
     
     func request (methodType: Method, url: String, parameters: [String: AnyObject]?, parameterEncoding: ParameterEncoding, headers: [String: String]?, completionHandler: ((JSON) -> Void))
     
-//    func request (methodType: Method, url: String, headers: [String: String]?) 
+//    func request (methodType: Method, url: String, headers: [String: String]?)
+    
+    func requestAsync (methodType: Method, url: String, parameters: [String: AnyObject]?, parameterEncoding: ParameterEncoding, headers: [String: String]?) -> BFTask
     
     }
 
