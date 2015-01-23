@@ -19,6 +19,7 @@
 		23EE439B1A6E98960091F521 /* MDBRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE439A1A6E98960091F521 /* MDBRestClient.swift */; };
 		23EE439D1A6E9AE40091F521 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE439C1A6E9AE40091F521 /* AlamofireAdapter.swift */; };
 		23EE439F1A6EAC100091F521 /* MDBServiceCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE439E1A6EAC100091F521 /* MDBServiceCommunicator.swift */; };
+		BE496ABD6D122832872D7527 /* libPods-Networking_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA465977FB1FCA947B68F68 /* libPods-Networking_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D56AD487CF671C48BA3CAEB /* Pods-Networking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Networking_Example/Pods-Networking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		23EE436F1A6E93250091F521 /* Networking_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EE43731A6E93250091F521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EE43741A6E93250091F521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,9 @@
 		23EE439A1A6E98960091F521 /* MDBRestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDBRestClient.swift; sourceTree = "<group>"; };
 		23EE439C1A6E9AE40091F521 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		23EE439E1A6EAC100091F521 /* MDBServiceCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDBServiceCommunicator.swift; sourceTree = "<group>"; };
+		23EE43A01A7258370091F521 /* Networking_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Networking_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EA465977FB1FCA947B68F68 /* libPods-Networking_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Networking_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDBFC123F7227B0D826F20F /* Pods-Networking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking_Example/Pods-Networking_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE496ABD6D122832872D7527 /* libPods-Networking_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +80,8 @@
 				23EE43711A6E93250091F521 /* Networking_Example */,
 				23EE43871A6E93250091F521 /* Networking_ExampleTests */,
 				23EE43701A6E93250091F521 /* Products */,
+				B817C469B1EB6228857527DE /* Pods */,
+				3B40860D48D077BD736C5C2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +109,7 @@
 				23EE439A1A6E98960091F521 /* MDBRestClient.swift */,
 				23EE439C1A6E9AE40091F521 /* AlamofireAdapter.swift */,
 				23EE439E1A6EAC100091F521 /* MDBServiceCommunicator.swift */,
+				23EE43A01A7258370091F521 /* Networking_Example-Bridging-Header.h */,
 			);
 			path = Networking_Example;
 			sourceTree = "<group>";
@@ -130,6 +139,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3B40860D48D077BD736C5C2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EA465977FB1FCA947B68F68 /* libPods-Networking_Example.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B817C469B1EB6228857527DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBFC123F7227B0D826F20F /* Pods-Networking_Example.debug.xcconfig */,
+				0D56AD487CF671C48BA3CAEB /* Pods-Networking_Example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23EE438E1A6E93250091F521 /* Build configuration list for PBXNativeTarget "Networking_Example" */;
 			buildPhases = (
+				0729750A0F2BDC0C63E0B8A2 /* Check Pods Manifest.lock */,
 				23EE436B1A6E93250091F521 /* Sources */,
 				23EE436C1A6E93250091F521 /* Frameworks */,
 				23EE436D1A6E93250091F521 /* Resources */,
+				07F371961A40EF46ECC92774 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +252,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0729750A0F2BDC0C63E0B8A2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		07F371961A40EF46ECC92774 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Networking_Example/Pods-Networking_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23EE436B1A6E93250091F521 /* Sources */ = {
@@ -358,23 +419,30 @@
 		};
 		23EE438F1A6E93250091F521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDBFC123F7227B0D826F20F /* Pods-Networking_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Networking_Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Networking_Example/Networking_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		23EE43901A6E93250091F521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D56AD487CF671C48BA3CAEB /* Pods-Networking_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Networking_Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Networking_Example/Networking_Example-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -431,6 +499,7 @@
 				23EE43901A6E93250091F521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23EE43911A6E93250091F521 /* Build configuration list for PBXNativeTarget "Networking_ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +508,7 @@
 				23EE43931A6E93250091F521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
